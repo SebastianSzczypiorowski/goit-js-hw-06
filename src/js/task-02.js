@@ -6,10 +6,12 @@ const ingredients = [
   "Herbs",
   "Condiments",
 ];
-const newList = document.createElement("li");
+const findElem = document.querySelector("#ingredients");
+
 ingredients.forEach((e) => {
+  const newList = document.createElement("li");
   newList.textContent = e;
+  findElem.append(newList);
   newList.classList.add("item");
-  newList.after(ingredients);
   console.log(newList);
 });
